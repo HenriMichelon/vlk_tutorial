@@ -2,8 +2,9 @@ cmake_minimum_required(VERSION 3.27)
 project(vlk_test)
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(${PROJECT_NAME} main.cpp)
-
+add_executable(${PROJECT_NAME}
+        src/main.cpp
+)
 
 find_package(Vulkan REQUIRED)
 target_include_directories(${PROJECT_NAME} PUBLIC ${Vulkan_INCLUDE_DIRS})
